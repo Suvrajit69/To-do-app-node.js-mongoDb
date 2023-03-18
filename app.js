@@ -1,6 +1,5 @@
 const express = require("express");
 const bodyParser = require("body-parser");
-// const { toNamespacedPath } = require("path");
 const date = require(__dirname + "/date.js")
 
 
@@ -41,10 +40,6 @@ app.get("/work", function(req,res){
     res.render("list", {listTitle: "work List", newListItems: workItems})
 })
 
-app.post("/work", function(req, res){
-    res.redirect("/work")
-})
-
 app.listen("3000", function(){
-    console.log("server is running in port 300")
+    console.log("server is running in port 3000")
 })
